@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	    <link type="text/css" href="jquery.hinttext.css" rel="stylesheet" />
+		<meta charset="utf-8">
+	    <link type="text/css" href="hinttext.css" rel="stylesheet" />
 	    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
-	    <script src="jquery.hinttext.js" type="text/javascript"></script>
+	    <script src="hinttext.js" type="text/javascript"></script>
 	</head>
 	<body>
-	    <p>Please type "xxxx@1" into below textbox to trigger autocomplete:</p>
-	    <div class="autocompletecon">
-			<input id="emailautocomplete"  class="emailautocomplete" name="email" type="email" maxlength="50" autocomplete="off" />
-		</div>
+	
+		<form class="signupform" action="/users/signup" method="post">
+			<div class="itemslist">
+			
+			    <!-- hinttext dom structure start, [make sure every input/textarea not share a same direct parent] -->
+				<div class="item">
+				    <input name="username" type="text" placeholder="用户名" maxlength="30" value=""/>			   
+				</div>
+				<div class="item">
+					<input name="password" type="password" placeholder="密码" maxlength="30" value="" />				
+				</div>
+				<div class="item">
+					<input name="confirmpassword" type="password" placeholder="确认密码" maxlength="30" value=""/>				
+				</div>
+				<div class="item">
+					<input name="nickname" type="text" placeholder="昵称" maxlength="20" value="" />				
+				</div>
+				<div class="item">
+					<textarea name="option" type="text" placeholder="自我介绍" value="" ></textarea>			
+				</div>
+				<!-- hinttext dom structure end -->
+				
+			</div>
+		</form>
 
 		<script type="text/javascript">
 		    $(function(){
-			    $(".emailautocomplete").emailautocomplete();
+			    $(".itemslist .item input, .itemslist .item textarea").hinttext();
 		    });
 		</script>
 	</body>

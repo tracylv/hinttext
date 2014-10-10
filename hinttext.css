@@ -1,1 +1,52 @@
-/* hinttext.css */
+
+body
+{
+	font-family: 'Microsoft Yahei','微软雅黑',Arial,STHeiti,SimHei,'宋体';
+	font-size: 14px;
+	line-height: 18px;
+	padding-top: 50px;
+	padding-left: 50px;
+}
+
+input,
+textarea,
+select
+{
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+.itemslist .item
+{
+	width: 350px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+.itemslist .item input
+{
+	border: 1px solid #000;
+	width: 328px;
+	padding: 6px 10px;
+	height: 20px;
+	line-height: 20px;
+}
+
+.itemslist .item textarea
+{
+	height: 80px;
+	padding: 6px 10px;
+	width: 328px;
+	overflow: auto;
+	border: 1px solid #000;
+	resize: none;
+}
+
+.itemslist .item .hinttext
+{
+	position: absolute;
+	top: 7px;
+	left: 11px;
+	color: #757575;
+}

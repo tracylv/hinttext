@@ -1,17 +1,11 @@
 /* hinttext */
 
-if (typeof String.prototype.trim !== 'function') {
-    String.prototype.trim = function () {
-        return this.replace(/^\s+|\s+$/g, '');
-    };
-}
-
-// hinttext
 (function ($) {
 
     var defaults =
     {
-
+	    // the class name for hinttext dom
+		hintLabelCls : "hinttext"
     };
 
     $.fn.hinttext = function (options) {
@@ -21,28 +15,31 @@ if (typeof String.prototype.trim !== 'function') {
 
             var $this = $(this);
             var $con = $this.parent();
+			var hintLabelCls = settings.hintLabelCls;
 
             // generate hintText dom
-            var dom = "<span class='hinttext'>" + $this.attr("placeholder") + "</span>";
+            var dom = "<span class='" + hintLabelCls + "'>" + $this.attr("placeholder") + "</span>";
             $this.attr("placeholder", "");
             $(dom).appendTo($con);
+			
+			hintLabelCls = "." + hintLabelCls;
 
-            if($this.val().trim().length > 0)
+            if($.trim($this.val()).length > 0)
             {
-                $(".hinttext", $con).hide();
+                $(hintLabelCls, $con).hide();
             }
 
             $this.click(function () {
 
                 // hide hint text
-                $(".hinttext", $con).hide();
+                $(hintLabelCls, $con).hide();
 
                 // the input area get focus
                 $this.focus();
             });
 
             // in case, click on the hint text
-            $(".hinttext", $con).click(function (event) {
+            $(hintLabelCls, $con).click(function (event) {
 
                 // hide hint text
                 $(this).hide();
@@ -54,16 +51,16 @@ if (typeof String.prototype.trim !== 'function') {
             // when input area is blur, if input value is null then show hint text , or else don't show hint text
             $this.blur(function () {
 
-                var inputval = $this.val().trim();
+                var inputval = $.trim($this.val());
 
                 if (inputval === "" || inputval === null) {
-                    $(".hinttext", $con).show();
+                    $(hintLabelCls, $con).show();
                 }
             });
 
             // input area get focus , hide the hint text
             $this.focus(function () {
-                $(".hinttext", $con).hide();
+                $(hintLabelCls, $con).hide();
             });
 
         });
