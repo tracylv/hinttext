@@ -33,7 +33,9 @@ var defaults =
 
 For example:       
 ```
-<!-- hinttext dom structure start, [make sure every input/textarea not share a same direct parent] -->
+<div class="itemslist">
+
+	<!-- hinttext dom structure start, [make sure every input/textarea not share a same direct parent] -->
 	<div class="item">
 		<input name="username" type="text" placeholder="用户名" maxlength="30" value=""/>			   
 	</div>
@@ -50,6 +52,8 @@ For example:
 		<textarea name="option" type="text" placeholder="自我介绍" value="" ></textarea>			
 	</div>
 	<!-- hinttext dom structure end -->
+
+</div>         
 ```
 
 Wrong Example:  (this is a wrong example dom for hinttext plugin)           
