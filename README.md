@@ -12,7 +12,7 @@ http://hinttext.tracylv.com/demo.htm
 ```
 var defaults =
     {
-	        // the class name for hinttext dom
+		// the class name for hinttext dom
 		hintLabelCls : "hinttext"
     };
 
