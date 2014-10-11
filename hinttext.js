@@ -5,7 +5,7 @@
     var defaults =
     {
 	    // the class name for hinttext dom
-		hintLabelCls : "hinttext"
+	    hintLabelCls : "hinttext"
     };
 
     $.fn.hinttext = function (options) {
@@ -15,14 +15,14 @@
 
             var $this = $(this);
             var $con = $this.parent();
-			var hintLabelCls = settings.hintLabelCls;
+	    var hintLabelCls = settings.hintLabelCls;
 
             // generate hintText dom
             var dom = "<span class='" + hintLabelCls + "'>" + $this.attr("placeholder") + "</span>";
             $this.attr("placeholder", "");
             $(dom).appendTo($con);
 			
-			hintLabelCls = "." + hintLabelCls;
+	    hintLabelCls = "." + hintLabelCls;
 
             if($.trim($this.val()).length > 0)
             {
