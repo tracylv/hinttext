@@ -58,6 +58,7 @@ For example:
 
 Wrong Example:  (this is a wrong example dom for hinttext plugin)           
 ```
+	<!-- this is a wrong example  -->
 	<div class="item">
 		<input name="username" type="text" placeholder="用户名" maxlength="30" value=""/>
 		<input name="password" type="password" placeholder="密码" maxlength="30" value="" />
