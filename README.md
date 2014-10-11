@@ -2,7 +2,7 @@ hinttext
 ========
 
 hinttext is a jquery plugin which show a hint text for input or textarea              
-Support Browsers: IE6-11, Firefox, Chrome, Safari, Opera
+**Support Browsers: IE6-11, Firefox, Chrome, Safari, Opera**
 
 #### Online Demo
 http://tracylv.com/users/signup        
@@ -28,9 +28,9 @@ var defaults =
 ```
 2.add the hinttext dom into your page. (Here is an example dom)                
 of course, we can use any class/id as you want, and then adjust the css according to your class/id.         
-Notes:  
-*input/textarea not share a same direct parent container*
-*Put your hinttext in the "placeholder" attribute*
+Notes:          
+**input/textarea not share a same direct parent container**            
+**Put your hinttext in the "placeholder" attribute, like: placeholder="用户名" **          
 
 ```
 <!-- hinttext dom structure start, [make sure every input/textarea not share a same direct parent] -->
