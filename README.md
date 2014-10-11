@@ -26,12 +26,11 @@ var defaults =
 <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>              
 <script src="http://hinttext.tracylv.com/hinttext.js" type="text/javascript"></script>              
 ```
-2.add the hinttext dom into your page. (Here is an example dom)                
-of course, we can use any class/id as you want, and then adjust the css according to your class/id.         
-Notes:          
-**input/textarea not share a same direct parent container**            
-**Put your hinttext in the "placeholder" attribute, like: placeholder="用户名" **          
-
+2.add the hinttext dom into page. (of course, we can use any class/id as you want, and then adjust the css according to your class/id.)         
+**Notes:**                  
+* **input/textarea not share a same direct parent container**            
+* **put your hint text in the "placeholder" attribute, like: placeholder="用户名"**          
+For example:       
 ```
 <!-- hinttext dom structure start, [make sure every input/textarea not share a same direct parent] -->
 	<div class="item">
@@ -61,7 +60,7 @@ Wrong Example:  (this is a wrong example dom for hinttext plugin)
 ```
 
 
-3.bind the behavior of the email autocomplete
+3.bind the behavior of hinttext
 ```
 <script type="text/javascript">
     $(function(){
