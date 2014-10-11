@@ -29,7 +29,8 @@ var defaults =
 2.add the hinttext dom into page. (of course, we can use any class/id as you want, and then adjust the css according to your class/id.)         
 **Notes:**                  
 * **input/textarea not share a same direct parent container**            
-* **put your hint text in the "placeholder" attribute, like: placeholder="用户名"**          
+* **put your hint text in the "placeholder" attribute, like: placeholder="用户名"**   
+
 For example:       
 ```
 <!-- hinttext dom structure start, [make sure every input/textarea not share a same direct parent] -->
@@ -76,6 +77,7 @@ $(".itemslist .item input, .itemslist .item textarea").hinttext({hintLabelCls: "
 ```
 1. copy the css and js code of this plugin into your own css and js file, because of this plugin's code is very little and it's not deserved to be loaded as a single file, it will increase the page load time in a way.
 2. adjust the css of this plugin according to your personal need.
+3. suggest to remove the body style in the hinttext.css. I think you must have your own body style, right?
 ```
 [1]:https://github.com/tracylv/hinttext/blob/master/demo_screenshot.jpg
 
